@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 //Struct contains difficulty, hints, # of attempts, and an array of words
 
@@ -83,6 +84,7 @@ void quickPlay(struct setting* set){
 
   //Declares extra variables for function
   int attempts = set->trys;
+  srand(time(NULL));
   int wordIdx = rand() % 2000;      //true random generator
   int hintIdx = 0;
 
